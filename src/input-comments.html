@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page Input comment</title>
+</head>
+<body>
+    <input placeholder="enter your name here"
+    id='userInput'
+    size=60/>
+    <button onClick='userSubmit()'>submit</button>
+    <br>
+    <p>
+        <input placeholder="enter your city here"
+        id='txt2'
+        onKeyUp="userSubmitA('txt2')"/>
+    </p>
+    <div id='result'></div>
+    <script type='text/javascript'>
+        document.writeln('<p>hello</p>');
+        function userSubmit(){
+            const UI = document.getElementById('userInput').value;
+            document.getElementById('result').innerHTML = `you typed: ${UI}`;
+        }
+        function userSubmitA(v1){
+            const UI = document.getElementById(v1).value;
+            document.getElementById('result').innerHTML = `you typed: ${UI}`;
+        }
+    </script>
+        <script type="text/javascript">
+            let x=15;
+            /*The browser will not break the Javascript when it see this
+            '</src'+'ipt>' tag. */
+            document.writeln(`<p> value is ${x}`);
+                </script>
+
+</body>
+</html>
