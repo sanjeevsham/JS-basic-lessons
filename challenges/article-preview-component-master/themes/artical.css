@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+:root {
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+}
+body {
+  box-sizing: 0;
+  background-color: lavender;
+  margin: 0;
+  padding: 0;
+}
+
+.content-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 4em;
+  margin-bottom: 4em;
+  width: 90%;
+}
+
+.content-card img {
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  width: 100%;
+}
+
+.content-card .content-text {
+  display: block;
+  font-family: 'Manrope', sans-serif;
+  padding: 1em;
+}
+
+.content-card .content-text h1 {
+  color: var(--very-dark-grayish-blue);
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.content-card .content-text p {
+  color: var(--desaturated-dark-blue);
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.content-card .content-footer {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: 100%;
+}
+
+.content-card .content-footer.on {
+  background-color: var(--very-dark-grayish-blue);
+}
+
+.content-card .content-footer .content-profile {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  padding-left: 1em;
+}
+
+.content-card .content-footer .content-profile img {
+  border-radius: 150px;
+}
+
+.content-card .content-footer .content-profile .content-info {
+  padding: 0.5em;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.8rem;
+}
+
+.content-card .content-footer .content-profile .content-info p {
+  color: var(--very-dark-grayish-blue);
+  margin: 0;
+}
+
+.content-card .content-footer .content-profile .content-info span {
+  color: var(--grayish-blue);
+}
+
+.content-card .content-footer .content-profile img {
+  width: 20%;
+}
+
+.content-card .content-footer .content-socials {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  margin-left: 1em;
+  width: 50%;
+}
+
+.content-card .content-footer .content-socials span {
+  color: var(--grayish-blue);
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.7rem;
+  min-width: 50px;
+}
+
+.content-card .content-footer .content-socials .icon {
+  font-size: 1.2rem;
+  padding: 0.5em;
+}
+
+.content-card .content-footer .content-btn {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1.5em;
+  width: 65%;
+}
+
+.content-card .content-footer .content-btn .btn {
+  background-color: var(--light-grayish-blue);
+  border-radius: 150px;
+  display: block;
+  padding: 0.5em;
+}
+
+.content-card .content-footer.on .content-btn .btn {
+  background-color: var(--desaturated-dark-blue);
+}
+
+.content-card .content-footer.on .content-btn .btn svg path {
+  fill: #fff;
+}
+
+.content-card .content-footer.on .content-btn {
+  width: 40%;
+}
+
+.content-card .content-footer.on .content-profile {
+  display: none;
+}
+
+.content-card .content-footer.off .content-socials {
+  display: none;
+}
+.content-card {
+  display: flex;
+  flex-direction: row;
+  max-width: 900px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content-card .aside {
+  padding: 1em;
+}
+
+.content-card img {
+  width: 40%;
+  border-radius: 0px;
+}
+
+.content-card .content-footer.on {
+  position: relative;
+  background-color: transparent;
+}
+
+.content-card .content-footer .content-profile img {
+  width: 20%;
+}
+
+.content-card .content-footer.on .content-btn {
+  width: 65%;
+}
+
+.content-card .content-footer .content-btn .btn {
+  cursor: pointer;
+}
+
+.content-card .content-footer.on .content-profile {
+  display: flex;
+}
+
+.content-card .content-footer.on .content-socials {
+  align-items: center;
+  border-radius: 10px;
+  background-color: var(--very-dark-grayish-blue);
+  box-shadow: 0px 0px 5px rgb(67, 55, 55);
+  justify-content: center;
+  position: absolute;
+  padding: 0.5em;
+  right: -19%;
+  top: -70%;
+}
+
+.content-card .content-footer.on .content-socials::after {
+  border-top: solid 25px var(--very-dark-grayish-blue);
+  border-left: solid 25px transparent;
+  border-right: solid 25px transparent;
+  content: '';
+  height: 0;
+  left: 40%;
+  position: absolute;
+  top: 80%;
+  width: 0;
+  z-index: 3;
+  z-index: -1;
+}
