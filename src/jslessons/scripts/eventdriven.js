@@ -3,7 +3,7 @@ const btn1 = document.querySelector('.btn1');
 const coolButton = document.querySelector('.btn2');
 
 function handleClick() {
-    console.log('IT GOT CLICKED!!!'); //ctrl+. to add mog
+  console.log('IT GOT CLICKED!!!'); //ctrl+. to add mog
 }
 btn1.addEventListener('click', handleClick);
 const hooray = () => console.log('HOORAY!!');
@@ -15,16 +15,16 @@ btn1.removeEventListener('click', handleClick);
 const buyButtons = document.querySelectorAll('button.buy');
 
 function handleBuyButtonClick(event) {
-    console.log('buy');
-    const button = event.target; //refer to dom element
-    console.log(button.textContent);
-    console.log('Price:' + parseFloat(event.target.dataset.price));
-    console.log(event.currentTarget);
-    console.log(event.target === event.currentTarget);
-    event.stopPropagation();
+ console.log('buy');
+  const button = event.target; //refer to dom element
+ console.log(button.textContent);
+ console.log('Price:' + parseFloat(event.target.dataset.price));
+ console.log(event.currentTarget);
+ console.log(event.target === event.currentTarget);
+ event.stopPropagation();
 }
 buyButtons.forEach(function(buyBtn) {
-    buyBtn.addEventListener('click', handleBuyButtonClick);
+ buyBtn.addEventListener('click', handleBuyButtonClick);
 });
 //event .target gives the reference to dom element.
 //box event bubbling.click many event
