@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./themes/ecomers.css" />
+    <title>E-commerce product page</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="main-nav">
+        <button class="openMenu" type="button" onclick="openNav()">
+          <img src="./images/icon-menu.svg" />
+        </button>
+        <a class="navbar-brand" href="./e-commerce.html">
+        <div id="collapse">
+          <button class="closeMenu" type="button" onclick="closeNav()">   
+            <img src="./images/icon-close.svg" width="20px"/>
+          </button>
+          <ul class="nav">
+            <li>
+              <a href="#">Collections</a>
+            </li>
+            <li>
+              <a href="#">Men</a>
+            </li>
+            <li>
+              <a href="#">Women</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-overlay"></div>
+      </div>
+      <div class="checkout">
+        <div class="cart" id="cart-icon">
+          <img src="./images/icon-cart.svg" />
+          <span class="badge"></span>
+        </div>
+        <img class="avatar" src="./images/image-avatar.png" width="40px" alt="avatar" />
+        <div class="card" id="card">
+          <div class="card-header">
+            <h4><strong>Card</strong></h4>
+          </div>
+          <div class="card-body" id="card-body">
+            <p class="card-empty"><strong>Your Cart is Empty</strong></p>
+            <div class="card-full">
+              <div class="card-item">
+                <img src="./images/image-product-1-thumbnail.jpg" width="40" alt="img-product-1"/>
+                <p>
+                  Fall Limited Edition Sneakers<br />
+                  $125.00 x <span id="qty"></span>
+                  <strong><span id="price"></span></strong>
+                </p>
+                <button type="button" id="delete">
+                  <img src="./images/icon-delete.svg" alt="delete"/>
+                </button>
+              </div>                
+              <button type="button" id="checkout">Checkout</button>
+           </div>
+          </div> 
+        </div>
+      </div>
+    </nav>    
+    <hr class="divide" />    
+    <main>
+      <div class="container">
+        <section class="product-views"> 
+          <div class="carousel">
+          <div class="carousel-controls">
+            <div class="carousel-prev">
+              <img id="prev" src="./images/icon-previous.svg" width="10px" />
+            </div>
+            <div class="carousel-next">
+              <img id="next" src="./images/icon-next.svg" width="10px" />
+            </div>
+          </div>
+          <div class="slides">
+            <img id="main-slide" src="./images/image-product-1.jpg" onclick="openLightbox(); currentImg(1);" alt="img-product-1"/>
+          </div>
+          <div class="slides">
+            <img id="main-slide" src="./images/image-product-2.jpg" onclick="openLightbox(); currentImg(2);" alt="img-product-2"/>
+          </div>
+          <div class="slides">
+            <img id="main-slide" src="./images/image-product-3.jpg" onclick="openLightbox(); currentImg(3);" alt="img-product-3"/>
+          </div>
+          <div class="slides">
+            <img id="main-slide" src="./images/image-product-4.jpg" onclick="openLightbox(); currentImg(4);" alt="img-product-4"/>
+          </div>
+        </div>
+        <div class="thumbnails">
+          <img id="thumb" src="./images/image-product-1-thumbnail.jpg" alt="thumb-product-1"/>
+          <img id="thumb" src="./images/image-product-2-thumbnail.jpg" alt="thumb-product-2"/>
+          <img id="thumb" src="./images/image-product-3-thumbnail.jpg" alt="thumb-product-3"/>
+          <img id="thumb" src="./images/image-product-4-thumbnail.jpg" alt="thumb-product-4"/>
+        </div>
+      </section>
+        <div id="lightbox" class="lightbox">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <div class="lightbox-content">
+            <div class="mySlides">
+              <img src="./images/image-product-1.jpg" alt="img-product-1" />
+            </div>
+            <div class="mySlides">
+              <img src="./images/image-product-2.jpg" alt="img-product-2"/>
+            </div>
+            <div class="mySlides">
+              <img src="./images/image-product-3.jpg" alt="img-product-3"/>
+            </div>
+            <div class="mySlides">
+              <img src="./imagse/image-product-4.jpg" alt="img-product-4"/>
+            </div>
+            <div class="lightbox-controls">
+              <div class="lightbox-prev">
+                <img class="prev" src="./images/icon-previous.svg" width="10px" onclick="plusSlides(-1)" alt="prev" />
+              </div>
+              <div class="lightbox-next">
+                <img class="next" src="./images/icon-next.svg" width="10px" onclick="plusSlides(1)" alt="next"/>
+              </div>
+            </div>
+          <div class="modal-thumbnail">
+              <div class="thumb-img" onclick="currentImg(1)">
+                <img src="./images/image-product-1-thumbnail.jpg" alt="thumb-product-1"/>
+              </div>
+              <div class="thumb-img" onclick="currentImg(2)">
+                <img src="./images/image-product-2-thumbnail.jpg" alt="thumb-product-2"/>
+              </div>
+              <div class="thumb-img" onclick="currentImg(3)">
+                <img src="./images/image-product-3-thumbnail.jpg" alt="thumb-product-3"/>
+              </div>
+              <div class="thumb-img" onclick="currentImg(4)">
+                <img src="./images/image-product-4-thumbnail.jpg" alt="thumb-product-4"/>
+              </div>
+            </div> 
+          </div>
+        </div> 
+        <div class="product-info">
+          <h4>SNEAKER COMPANY</h4>
+          <h1>FALL LIMITED EDITION SNEAKERS</h1>
+          <p>
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="pricing">
+            <span><strong>$125.00</strong></span>
+            <span class="discount">50%</span>
+            <p><del>$250.00</del></p>
+          </div>
+          <div class="payout">
+            <div class="qty-bar">
+              <button type="button" id="minus" id="minus">
+                <img src="./images/icon-minus.svg" alt="minus"/>
+              </button>
+              <span id="qty">0</span>
+              <button type="button" class="plus" id="plus">
+                <img src="./images/icon-plus.svg" alt="plus"/>
+              </button>
+            </div>
+            <button type="submit" class="btn-add" id="add-cart" name="submit">
+              <img src="./images/icon-cart.svg" alt="cart"/>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </main>
+    <script src="./ecomers.js"></script>
+  </body>
+</html>

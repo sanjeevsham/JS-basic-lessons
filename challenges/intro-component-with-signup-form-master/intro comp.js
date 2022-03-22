@@ -1,41 +1,65 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable eqeqeq */
-/* eslint-disable no-undef */
-/* form validation
-- objevení vykřičníku a textu pod formulářem */
+const form = document.getElementsByTagName('form')[0];
 
-const exclamation = document.getElementsByClassName('error')
-const form = document.getElementById('form')
-const firstName = document.getElementById('firstName')
-const lastName = document.getElementById('lastName')
-const email = document.getElementById('email')
-const password = document.getElementById('password')
-const formError = document.getElementsByClassName('form_error')
-const input = document.getElementsByTagName('input')
+form.setAttribute('novalidate', '');
 
-/* validation */
-function formValidation (event) {
-  /* for loop for all input fields except submit input, so it is 4 */
-  for (i = 0; i < 4; i++) {
-    /* clear the form */
-    input[i].classList.remove('error')
-    formError[i].style.display = 'none'
+form.addEventListener('submit', event => {
+    if (!fName.validity.valid || !lName.validity.valid || !email.validity.valid || !password.validity.valid) {
+        showError();
+        event.preventDefault();
+    }
+});
 
-    /* email validation */
+const fName = document.getElementById('fname');
+const fNameErrorImg = document.querySelector('.wrapper-errorimg');
+
+const lName = document.getElementById('lname');
+const lNameErrorImg = document.querySelector('.wrapper-errorimg');
+
+
+const email = document.getElementById('email');
+const emailErrorImg = document.querySelector('.wrapper-errorimg');
+
+
+const password = document.getElementById('password');
+const passwordErrorImg = document.querySelector('.wrapper-errorimg');
+
+function showError() {
+
+    if (!fName.validity.valid) {
+        if (fName.validity.valueMissing) {
+            alert('First Name cannot be empty');
+        }
+        fNameError.classList.toggle('active', true);
+        fNameErrorImg.classList.toggle('active', true);
+        fName.classList.toggle('active', true);
+    }
+
+    if (!lName.validity.valid) {
+        if (lName.validity.valueMissing) {
+            alert('Last Name cannot be empty');
+        }
+        lNameError.classList.toggle('active', true);
+        lNameErrorImg.classList.toggle('active', true);
+        lName.classList.toggle('active', true);
+    }
+
     if (!email.validity.valid) {
-      formError[2].style.display = 'block'
-      email.classList.add('error')
-      event.preventDefault()
+        if (email.validity.valueMissing) {
+            alert('Email cannot be empty');
+        } else if (email.validity.typeMismatch) {
+            alert('Email is not valid');
+        }
+        emailError.classList.toggle('active', true);
+        emailErrorImg.classList.toggle('active', true);
+        email.classList.toggle('active', true);
     }
 
-    /* validation of other fields */
-    if ((input.type != 'email' || input.type != 'submit') && input[i].value == '') {
-      formError[i].style.display = 'block'
-      input[i].classList.add('error')
-      event.preventDefault()
+    if (!password.validity.valid) {
+        if (password.validity.valueMissing) {
+            alert('Password cannot be empty');
+        }
+        passwordError.classList.toggle('active', true);
+        passwordErrorImg.classList.toggle('active', true);
+        password.classList.toggle('active', true);
     }
-  }
 }
-
-/* event listener on button, call the formValidation function */
-form.addEventListener('submit', formValidation, false)

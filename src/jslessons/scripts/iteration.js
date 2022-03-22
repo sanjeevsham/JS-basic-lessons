@@ -159,3 +159,11 @@ function increaseValue(item){
 const newTotalNumber=orderTotals.map(increaseValue)
 console.log(newTotalNumber)
 
+function tallyNumbers (prvNumber, currentNumber) {
+  console.log(`The Total so far is ${prvNumber}`); 
+  console.log(`The current Number is ${currentNumber}`); 
+  console.log(' -----');
+  // return the current tally PLUS the amount of this order 
+  return prvNumber + currentNumber;
+  const allorders = orderTotals.reduce (tallyNumbers, 0); 
+  console.log('allOrders: '+ allorders);
