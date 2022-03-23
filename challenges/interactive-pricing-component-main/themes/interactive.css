@@ -12,13 +12,13 @@ aside {
   box-shadow: 0px 0px 15px hsl(227, 25%, 85%);
   color: hsl(225, 20%, 60%);
   font-size: 15px;
-  min-width: 500px;
   margin-top: 15px;
+  min-width: 500px;
   padding: 50px 30px;
 }
 body {
-  background-repeat: no-repeat;
   background-image: url('images/bg-pattern.svg');
+  background-repeat: no-repeat;
   display: flex;
   font-family: 'Manrope', sans-serif;
   justify-content: center;
@@ -28,8 +28,8 @@ body {
 }
 header {
   background-image: url('images/pattern-circles.svg');
-  background-repeat: no-repeat;
   background-position: center;
+  background-repeat: no-repeat;
   margin-top: 20px;
   padding: 50px 0;
   text-align: center;
@@ -55,22 +55,22 @@ header p {
   outline: none;
 }
 .myrange::-webkit-slider-thumb {
-  cursor: pointer;
-  background-image: url('images/icon-slider.svg');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  -webkit-appearance: none;
   background-color: hsl(174, 86%, 45%);
+  background-image: url('images/icon-slider.svg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
   border-radius: 50%;
+  cursor: pointer;
   height: 35px;
   width: 35px;
-  -webkit-appearance: none;
 }
 .myrange::-webkit-slider-thumb:hover {
   box-shadow: 0px 0px 10px hsl(174, 86%, 45%);
 }
 .progress .progress-bar {
-  position: relative;
   height: 20px;
+  position: relative;
 }
 .progress-bar input[type='range'] {
   width: 100%;
@@ -93,9 +93,9 @@ label {
   margin-left: 10px;
 }
 .progress .switch {
-  cursor: pointer;
-  border-radius: 20px;
   background-color: hsl(174, 77%, 80%);
+  border-radius: 20px;
+  cursor: pointer;
   display: inline-block;
   height: 20px;
   position: relative;
@@ -109,8 +109,8 @@ label {
   top: 0;
 }
 .progress .switch .slider {
-  border-radius: 50%;
   background-color: white;
+  border-radius: 50%;
   height: 16px;
   left: -7px;
   position: absolute;
@@ -126,23 +126,22 @@ label {
   justify-content: space-between;
 }
 .start ul {
-  list-style-image: url('images/icon-check.svg');
   line-height: 25px;
+  list-style-image: url('images/icon-check.svg');
   margin-left: 20px;
 }
 .start button {
   align-self: center;
   background-color: var(--main-color);
-  border: none;
   border-radius: 22px;
-  cursor: pointer;
+  border: none;
   color: white;
+  cursor: pointer;
   font-size: 15px;
   height: 45px;
   outline: none;
   width: 180px;
 }
-
 .tarrif {
   display: flex;
   margin-bottom: 50px;
@@ -174,9 +173,15 @@ label {
   margin-left: 5px;
 }
 @media (max-width: 600px) {
+  span:first-of-type span {
+    color: var(--main-color);
+    font-size: 30px;
+    line-height: 30px;
+  }
+  span:first-of-type,
   aside {
-    min-width: 375px;
     margin-bottom: 50px;
+    min-width: 375px;
     padding: 50px 30px;
   }
   .container {
@@ -188,13 +193,7 @@ label {
   .tarrif .price span {
     display: inline-block;
   }
-  .tarrif .price span:first-of-type,
-  .tarrif .price span:first-of-type span {
-    color: var(--main-color);
-    font-size: 30px;
-    line-height: 30px;
-  }
-  .start {
+  .tarrif .price .tarrif .price .start {
     flex-direction: column;
   }
   .start ul {
