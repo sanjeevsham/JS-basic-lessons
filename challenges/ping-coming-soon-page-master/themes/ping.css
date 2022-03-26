@@ -1,0 +1,56 @@
+@import url('https://fonts.google.com/specimen/Libre+Franklin');
+* {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+body {
+  font-family: 'Libre Franklin', sans-serif;
+}
+.logo {
+  margin-left: auto;
+  display: block;
+  margin-right: auto;
+  width: 5%;
+  margin-bottom: 40px;
+}
+p {
+  text-align: center;
+  margin-top: 20px;
+}
+p input {
+  border-radius: 20px;
+  height: 30px;
+  width: 20%;
+  border: transparent;
+  border-color: hsl(223, 100%, 88%);
+}
+.container {
+  margin-top: 50px;
+}
+#submitButton {
+  border-radius: 20px;
+  height: 30px;
+  width: 10%;
+  border: transparent;
+  color: white;
+  background-color: hsl(223, 87%, 63%);
+}
+.title {
+  color: gray;
+}
+.darkbluetext {
+  color: black;
+}
+.dashboard {
+  height: 40%;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.socials a {
+  text-align: center;
+  /* margin-left: 50%;
+  margin-right: 50%; */
+}

@@ -1,19 +1,12 @@
 let dailybtn = document.getElementById("daily")
 let weeklybtn = document.getElementById("weekly")
 let monthlybtn = document.getElementById("monthly")
-
 let daily_Data = document.getElementsByClassName("daily-data")
 let daily_Data_Previous = document.getElementsByClassName("daily-data-previous")
-
-
 let weekly_Data = document.getElementsByClassName("weekly-data")
 let weekly_Data_Previous = document.getElementsByClassName("weekly-data-previous")
-
-
 let monthly_Data = document.getElementsByClassName("monthly-data")
 let monthly_Data_Previous = document.getElementsByClassName("monthly-data-previous")
-
-
 
 function show_based_time_data() {
     dailybtn.addEventListener("click", function() {
