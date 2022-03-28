@@ -2,30 +2,44 @@
   margin: 0;
   padding: 0;
 }
+body {
+  background-image: url('https://www.itl.cat/pngfile/big/210-2101051_dark-web-scanning-background-image-for-website-of.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.last-cell {
+  border-right: none;
+}
+.main {
+  text-align: center;
+  color: white;
+  margin-top: 10px;
+}
 .table-box {
   margin: 50px auto;
 }
 .table-row {
-  display: table;
-  width: 80%;
-  margin: 10px auto;
-  font-family: sans-serif;
   background: transparent;
-  padding: 12px 0;
-  color: #555;
-  font-size: 13px;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 5, 0.3);
+  color: #555;
+  display: table;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin: 10px auto;
+  padding: 12px 0;
+  width: 80%;
 }
 .table-cell {
-  display: table-cell;
-  width: 30%;
-  text-align: center;
-  padding: 4px 0;
   border-right: 1px solid black;
+  display: table-cell;
+  padding: 4px 0;
+  text-align: center;
   vertical-align: middle;
+  width: 30%;
 }
 .table-head {
-  background: blue;
+  background: rgb(88, 171, 219);
   box-shadow: none;
   color: #fff;
   font-weight: 600;
@@ -33,9 +47,9 @@
 .table-head .table-cell {
   border-right: none;
 }
-.last-cell {
-  border-right: none;
-}
-.main {
-  text-align: center;
+a {
+  text-decoration: none;
+  color: white;
+  font-size: medium;
+  font-weight: bolder;
 }
