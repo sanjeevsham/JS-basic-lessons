@@ -1,0 +1,23 @@
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.flex > * {
+  flex: 10;
+  padding: 20px;
+}
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(https://cdn.xxl.thumbs.canstockphoto.com/about-me-stock-photo_csp32110446.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.about {
+  color: white;
+  text-align: center;
+}
