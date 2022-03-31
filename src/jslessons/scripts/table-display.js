@@ -1,4 +1,4 @@
-import { names, aadhar, date, city, time, date1, labName, reportNo, gender, testResult } from "./module-array.js";
+import { names, aadhar, date, city, time, date1, labName, reportNo, gender, testResult } from "./RT.PCR.js";
 import { getRadioValue } from "./radiovalue.js";
 
 var n = 1;
