@@ -9,7 +9,7 @@ input {
   border-radius: 10px;
   border: transparent;
 }
-.top-container {
+.container-1 {
   background-image: linear-gradient(
     to right,
     hsl(264, 100%, 61%),
