@@ -42,11 +42,6 @@ td {
   border: 2px solid black;
 }
 body {
-  /* background-image: linear-gradient(
-    to right,
-    hsl(180, 65%, 85%),
-    hsl(182, 82%, 56%)
-  ); */
   background-image: url(https://bsmedia.business-standard.com/_media/bs/img/article/2021-05/28/full/1622225734-6331.jpg?im=Resize,width=1200);
   background-size: cover;
   background-position: center;
