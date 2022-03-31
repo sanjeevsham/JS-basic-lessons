@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demo-app';
+  location='ooty';
+
+onBoxValueChange(paramData:any)
+{
+  console.log("app component: " + paramData.value);
+}
 }
 // @Component({
 //   selector: 'my-root',

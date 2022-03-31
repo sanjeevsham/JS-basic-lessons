@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../themes/modules3.css" />
+    <link rel="stylesheet" href="../themes/RT-PCR.css" />
     <title>RT-PCR Form</title>
   </head>
   <body>
@@ -24,7 +24,9 @@
               id="aadhar-no"
             />
           </div>
-          <div><label>Enter Date:</label><input type="date" id="date" /></div>
+          <div>
+            <label>Enter Date Of Birth:</label><input type="date" id="date" />
+          </div>
           <div>
             <label>Enter City Name:</label
             ><input type="text" placeholder="Enter Your City" id="city" />
@@ -36,9 +38,10 @@
           <div>
             <label>Test Result:</label>
             <label>Positive:</label
-            ><input type="checkbox" id="result1" checked />
+            ><input type="radio" id="result" name="result" value="Positive" />
             <span
-              ><label>Negative:</label><input type="checkbox" id="result2"
+              ><label>Negative:</label
+              ><input type="radio" id="result" name="result" value="Negative"
             /></span>
           </div>
           <div>
@@ -51,16 +54,18 @@
           <div>
             <label>Select Gender:</label>
             <label>Male:</label>
-            <input type="checkbox" id="gender-male" checked />
-            <label>Female:</label><input type="checkbox" id="gender-female" />
-            <label>Others:</label><input type="checkbox" id="gender-others" />
+            <input type="radio" id="gender" name="gender" value="Male" />
+            <label>Female:</label
+            ><input type="radio" id="gender" name="gender" value="Female" />
+            <label>Others:</label
+            ><input type="radio" id="gender" name="gender" value="Others" />
           </div>
           <div>
             <input type="button" id="button" value="Submit" />
           </div>
         </form>
       </section>
-      <section id="second-container">
+      <section id="second-container" class="container">
         <table id="table">
           <thead>
             <th>Name</th>
@@ -71,18 +76,15 @@
             <th>Date Of Test</th>
             <th>Lab Name</th>
             <th>Report No</th>
+            <th>Test Result</th>
+            <th>Gender</th>
           </thead>
         </table>
       </section>
-      <section id="third-container">
+      <section id="third-container" class="container">
         <div>
-          <input type="search" id="search" />
-          <input
-            type="button"
-            id="button1"
-            value="Search By Aadhar Number"
-            onclick="addRow()"
-          />
+          <input type="text" id="search" />
+          <input type="button" id="button1" value="Search By Aadhar Number" />
         </div>
       </section>
       <section id="fourth-container">
@@ -96,10 +98,12 @@
             <th>Date Of Test</th>
             <th>Lab Name</th>
             <th>Report No</th>
+            <th>Test Result</th>
+            <th>Gender</th>
           </thead>
         </table>
       </section>
     </main>
-    <script src="./jslessons/scripts/modules3.js" type="module"></script>
+    <script src="./jslessons/scripts/RT.PCR.js"></script>
   </body>
 </html>

@@ -1,8 +1,15 @@
-<h1>Hai Sanjeev{{ title }}</h1>
+<h1>Welcome to {{ title }} from {{ location }}</h1>
 <hr />
 <div>
-  <app-boxa></app-boxa>
+  <app-boxa
+    labelValue="location"
+    [data]="location"
+    (onBoxDataChange)="onBoxValueChange($event)"
+  ></app-boxa>
 </div>
 <div>
-  <app-boxa></app-boxa>
+  <app-boxa [data]="location"></app-boxa>
+</div>
+<div>
+  <app-customer-form></app-customer-form>
 </div>
