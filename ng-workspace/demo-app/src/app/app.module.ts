@@ -7,6 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { AppHeaderComponent } from './app.header.component';
 import { BoxaComponent } from './boxa/boxa.component';
 import { CustomerFormComponent } from './customer-form/customer-form.component';
+import { RtPcrComponent } from './rt-pcr/rt-pcr.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { CustomerFormComponent } from './customer-form/customer-form.component';
     HomeComponent,
     AppHeaderComponent,
     BoxaComponent,
-    CustomerFormComponent
+    CustomerFormComponent,
+    RtPcrComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,6 +26,6 @@ import { CustomerFormComponent } from './customer-form/customer-form.component';
     FormsModule
   ],
   providers: [],
-  bootstrap: [HomeComponent,AppHeaderComponent,AppComponent]
+  bootstrap: [HomeComponent,AppHeaderComponent,AppComponent,RtPcrComponent,SearchComponent]
 })
 export class AppModule { }

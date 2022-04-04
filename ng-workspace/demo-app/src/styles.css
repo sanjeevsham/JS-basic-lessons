@@ -1,2 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("../node_modules/bootstrap/dist/css/bootstrap.css");
+body {
+  background-image: url(https://bsmedia.business-standard.com/_media/bs/img/article/2021-05/28/full/1622225734-6331.jpg?im=Resize,width=1200);
+  background-size: cover;
+  /* background-position: center; */
+  height: 100%;
+  width: 100%;
+}

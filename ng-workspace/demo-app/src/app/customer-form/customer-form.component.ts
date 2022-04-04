@@ -10,6 +10,7 @@ export class CustomerFormComponent implements OnInit {
    customerModel:any;
   constructor() { }
 
+  
   ngOnInit(): void {
     this.customerModel={
       firstName:'',
